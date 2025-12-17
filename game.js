@@ -251,12 +251,17 @@ function highlightWinningCells(line) {
 // ===== Draw Winning Line =====
 function drawWinningLine(line) {
     const canvas = elements.winningLine;
-    const boardRect = elements.gameBoard.getBoundingClientRect();
+    const board = elements.gameBoard;
+    const boardRect = board.getBoundingClientRect();
 
     canvas.width = boardRect.width;
     canvas.height = boardRect.height;
     canvas.style.width = boardRect.width + 'px';
     canvas.style.height = boardRect.height + 'px';
+    canvas.style.position = 'absolute';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.pointerEvents = 'none';
 
     const ctx = canvas.getContext('2d');
 

@@ -271,35 +271,120 @@ body {
 
 /* ===== Responsive Design ===== */
 @media (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .container {
+        padding: 10px 0;
+    }
+
     .game-title {
-        font-size: 36px;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    #mode-selection h2,
+    #difficulty-selection h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
     }
 
     .game-board {
-        grid-template-columns: repeat(3, 80px);
-        grid-template-rows: repeat(3, 80px);
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(3, 70px);
         gap: 8px;
+        margin-bottom: 20px;
     }
 
     .cell {
-        width: 80px;
-        height: 80px;
-        font-size: 40px;
+        width: 70px;
+        height: 70px;
+        font-size: 36px;
+        border: 3px solid #2C1810;
     }
 
     .scoreboard {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .score-item {
+        gap: 3px;
+    }
+
+    .score-label {
+        font-size: 14px;
+    }
+
+    .score-value {
+        font-size: 24px;
+    }
+
+    .turn-indicator {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    #current-turn {
+        font-size: 24px;
     }
 
     .mode-btn,
-    .difficulty-btn {
-        font-size: 18px;
-        min-width: 180px;
+    .difficulty-btn,
+    .control-btn {
+        font-size: 16px;
+        min-width: 160px;
+        padding: 12px 20px;
+    }
+
+    .secondary-btn {
+        font-size: 14px;
+        min-width: 130px;
+        padding: 10px 15px;
+    }
+
+    .control-btn.tertiary {
+        font-size: 12px;
+        min-width: 120px;
+        padding: 8px 15px;
     }
 
     #result-message {
-        font-size: 26px;
+        font-size: 24px;
+    }
+
+    .game-controls {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .game-title {
+        font-size: 28px;
+    }
+
+    .game-board {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+        gap: 6px;
+    }
+
+    .cell {
+        width: 60px;
+        height: 60px;
+        font-size: 32px;
+    }
+
+    .score-label {
+        font-size: 12px;
+    }
+
+    .score-value {
+        font-size: 20px;
     }
 }
 
